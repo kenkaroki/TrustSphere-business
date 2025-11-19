@@ -93,7 +93,7 @@ async def signup(request: SignupRequest):
         name=request.name
     )
 
-@router.post("/login", response_model=AuthResponse)
+@router.post("/login", response_model=AuthResponse , )
 async def login(request: LoginRequest):
     """Login to existing account"""
     businesses = get_businesses_collection()
